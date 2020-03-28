@@ -1,6 +1,6 @@
 # Install PostgreSQL via Brew
 
-Pre-Reqs
+Pre-Reqs < /br>
 Brew Package Manager (https://brew.sh/)
 
 In your command-line run the following commands:
