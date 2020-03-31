@@ -24,23 +24,23 @@ git --version
 ```
 git config --global user.name "YOUR_USERNAME"
 ```
+To verify:
 ```
 git config --global user.name
 ```
-YOUR_USERNAME
 ```
 git config --global user.email "your_email_address@example.com"
 ```
+To verify:
 ```
 git config --global user.email
 ```
-your_email_address@example.com
 
 To verify that you entered your email correctly, type:
 ```
 git config --global --list
 ```
-
+You will see the below in your terminal:<br />
 user.name=YOUR_USERNAME<br />
 user.email=your_email_address@example.com<br />
 (END)<br />
@@ -48,8 +48,7 @@ user.email=your_email_address@example.com<br />
 To quit:<br />
 :q
 
-[Source]
-(https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html#open-a-shell)
+[source](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html#open-a-shell)
 
 ## ED25519 SSH keys
 You should always favor ED25519 SSH keys, since they are more secure and have better performance over the other types.
@@ -81,7 +80,7 @@ macOS:
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
-## Add your public SSH key to your GitLab account by:<br />
+## Add your public SSH key to your GitLab account by:
 1. Clicking your avatar in the upper right corner and selecting Settings.<br />
 2. Navigating to SSH Keys and pasting your public key from the clipboard into the Key field. If you:<br />
     * Created the key with a comment, this will appear in the Title field.<br />
@@ -96,11 +95,12 @@ ssh -T git@gitlab.com
 ```
 
 The first time you connect to GitLab via SSH, you will be asked to verify the authenticity of the GitLab host you are connecting to. For example, when connecting to GitLab.com, answer yes to add GitLab.com to the list of trusted hosts:
+```
 The authenticity of host 'gitlab.com (35.231.145.151)' can't be established.
 ECDSA key fingerprint is SHA256:HbW3g8zUjNSksFbqTiUWPWg2Bq1x8xdGUrliXFzSnUw.<br />
 Are you sure you want to continue connecting (yes/no)? yes<br />
 Warning: Permanently added 'gitlab.com' (ECDSA) to the list of known hosts<br /><br />
-
+```
 Note: For GitLab.com, consult the SSH host keys fingerprints, to make sure you’re connecting to the correct server.<br />
 Once added to the list of known hosts, you won’t be asked to validate the authenticity of GitLab’s host again. Run the above command once more, and you should only receive a Welcome to GitLab, @username! message.
 If the welcome message doesn’t appear, run SSH’s verbose mode by replacing -T with -vvvT to understand where the error is.
