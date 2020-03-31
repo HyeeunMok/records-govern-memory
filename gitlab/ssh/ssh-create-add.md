@@ -105,4 +105,8 @@ Note: For GitLab.com, consult the SSH host keys fingerprints, to make sure you
 Once added to the list of known hosts, you won’t be asked to validate the authenticity of GitLab’s host again. Run the above command once more, and you should only receive a Welcome to GitLab, @username! message.
 If the welcome message doesn’t appear, run SSH’s verbose mode by replacing -T with -vvvT to understand where the error is.
 
+#### GitLab instance: <br />
+Gitlab can be installed locally so Gitlab instance is what is being run locally. E.g., if one runs Gitlab instance at gitlab.example.net the domain is gitlab.example.net, and the ssh command is ssh -T git@gitlab.example.net.
+For Gitlab at gitlab.com the command is ssh -T git@gitlab.com.
+
 [source](https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair)
